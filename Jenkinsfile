@@ -1,30 +1,30 @@
-pipeline{
-    stages{
-        stage("A"){
-            steps{
+pipeline {
+    stages {
+        stage("A") {
+            steps {
                 echo "========executing A========"
             }
-            post{
-                always{
+            post {
+                always {
                     echo "========always========"
                 }
-                success{
+                success {
                     echo "========A executed successfully========"
                 }
-                failure{
+                failure {
                     echo "========A execution failed========"
                 }
             }
         }
     }
-    post{
-        always{
+    post {
+        always {
             echo "========always========"
         }
-        success{
+        success {
             echo "========pipeline executed successfully ========"
         }
-        failure{
+        failure {
             echo "========pipeline execution failed========"
         }
     }
